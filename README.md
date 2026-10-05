@@ -67,7 +67,6 @@ Proyek ini dikembangkan secara bertahap. Pendekatan yang telah dan akan dieksplo
 | 04  | Neural Collaborative Filtering             | PyTorch            | 🚧 Coming Soon |
 | 05  | Two-Tower / Dual Encoder                   | PyTorch            | 🚧 Coming Soon |
 | 06  | Learning-to-Rank                           | PyTorch / LightGBM | 🚧 Coming Soon |
-| 07+ | Pendekatan lainnya                         | —                  | 🔮 Eksplorasi  |
 
 > Daftar pendekatan dapat bertambah seiring eksplorasi dan pengembangan proyek.
 
