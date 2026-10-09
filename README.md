@@ -1,110 +1,78 @@
 # 🎬 Movie Recommendation System
 
-Proyek ini merupakan eksplorasi dan pengembangan **sistem rekomendasi film** dengan menerapkan berbagai pendekatan, mulai dari metode berbasis aturan sederhana hingga *machine learning* dan *deep learning*.
+Proyek ini merupakan eksplorasi dan pengembangan **sistem rekomendasi film** menggunakan berbagai pendekatan, mulai dari metode berbasis aturan sederhana hingga machine learning dan deep learning.
 
-Proyek dikembangkan secara bertahap untuk memahami bagaimana sebuah sistem rekomendasi dapat berkembang dari pendekatan sederhana menjadi sistem **retrieval dan ranking** yang lebih terstruktur.
+Proyek dikembangkan secara bertahap untuk memahami bagaimana sistem rekomendasi berkembang dari pendekatan sederhana menjadi sistem retrieval dan ranking yang lebih terstruktur.
 
-Setiap pendekatan diimplementasikan dan dianalisis secara terpisah sehingga karakteristik, kelebihan, keterbatasan, dan hasilnya dapat dibandingkan dengan pendekatan lainnya.
-
----
+Setiap pendekatan diimplementasikan dan dianalisis secara terpisah agar karakteristik, kelebihan, keterbatasan, serta hasil eksperimennya dapat dipelajari dan dibandingkan.
 
 ## 🎯 Latar Belakang
 
-Dengan katalog film yang terdiri dari puluhan ribu judul, pengguna dapat mengalami kesulitan dalam menemukan film yang sesuai tanpa harus menelusuri katalog secara manual.
+Dengan katalog film yang terdiri dari puluhan ribu judul, pengguna dapat mengalami kesulitan menemukan film yang sesuai tanpa menelusuri katalog secara manual.
 
-Sistem rekomendasi dapat membantu mempersempit pilihan tersebut dengan memberikan sejumlah film yang dianggap paling relevan berdasarkan pendekatan tertentu.
+Sistem rekomendasi membantu mempersempit pilihan dengan menyarankan film berdasarkan kriteria tertentu.
 
-Namun, tidak terdapat satu pendekatan yang selalu paling tepat untuk semua kondisi.
+Namun, setiap pendekatan memiliki karakteristik berbeda. Popularity-Based Recommendation menggunakan popularitas sebagai dasar rekomendasi, Content-Based Recommendation membandingkan karakteristik film, sedangkan Collaborative Filtering memanfaatkan pola interaksi pengguna.
 
-Pendekatan berbasis popularitas dapat memberikan rekomendasi secara sederhana, tetapi tidak mempertimbangkan preferensi individual. Pendekatan berbasis konten dapat mempertimbangkan karakteristik film, sedangkan *collaborative filtering* dapat memanfaatkan pola interaksi pengguna.
+Proyek ini mengeksplorasi berbagai pendekatan tersebut untuk memahami cara kerja, trade-off, dan kemungkinan pengembangannya.
 
-Oleh karena itu, proyek ini mengeksplorasi berbagai pendekatan untuk memahami bagaimana masing-masing metode menyelesaikan permasalahan rekomendasi.
+## 🎯 Tujuan Proyek
 
----
-
-## 📌 Tujuan Proyek
-
-Proyek ini bertujuan untuk:
-
-* Memahami proses pengembangan sistem rekomendasi dari tahap data hingga rekomendasi.
-* Mengeksplorasi berbagai algoritma dan pendekatan recommendation system.
-* Memahami perbedaan *content-based*, *collaborative filtering*, *retrieval*, dan *ranking*.
-* Menerapkan pendekatan machine learning dan deep learning untuk recommendation.
-* Membandingkan karakteristik dan hasil dari berbagai pendekatan.
-* Mempelajari bagaimana sistem rekomendasi dapat dikembangkan menuju arsitektur yang lebih scalable dan berorientasi produksi.
-
----
+* Memahami proses pengembangan sistem rekomendasi dari data hingga rekomendasi.
+* Mengeksplorasi berbagai algoritma recommendation system.
+* Memahami perbedaan Content-Based Filtering, Collaborative Filtering, Retrieval, dan Learning-to-Rank.
+* Menerapkan pendekatan machine learning dan deep learning secara bertahap.
+* Mengevaluasi hasil eksperimen berdasarkan karakteristik masing-masing metode.
+* Mempelajari pertimbangan relevansi, personalisasi, kompleksitas, dan kebutuhan komputasi.
 
 ## 📊 Dataset
 
 Proyek menggunakan dataset metadata film dengan sekitar **45.000 judul film**.
 
-Beberapa informasi yang tersedia meliputi:
+Informasi yang tersedia mencakup judul, genre, overview, popularitas, rating, informasi perilisan, dan metadata lainnya.
 
-* Judul film
-* Genre
-* Overview
-* Popularitas
-* Rating
-* Informasi perilisan
-* Metadata film lainnya
+Fitur yang digunakan dapat berbeda pada setiap pendekatan. Dataset mentah tidak disertakan langsung dalam repository; lihat dokumentasi masing-masing notebook untuk informasi tentang data yang digunakan.
 
-Fitur yang digunakan dapat berbeda pada setiap pendekatan, sesuai dengan kebutuhan algoritma yang digunakan.
+## 🧠 Pendekatan yang Dieksplorasi
 
-Dataset mentah tidak disertakan secara langsung dalam repository. Informasi mengenai sumber dataset dan cara mempersiapkan data akan dijelaskan pada dokumentasi terkait.
+| No. | Pendekatan                                 | Teknologi          | Status                                   |
+| --- | ------------------------------------------ | ------------------ | ---------------------------------------- |
+| 01  | Popularity-Based Recommendation            | Pandas             | ✅ Selesai                                |
+| 02  | Content-Based — TF-IDF + Cosine Similarity | Scikit-learn       | ✅ Implementasi dan evaluasi awal selesai |
+| 03  | Collaborative Filtering                    | TBD                | 🚧 Direncanakan                          |
+| 04  | Neural Collaborative Filtering             | PyTorch            | 🚧 Direncanakan                          |
+| 05  | Two-Tower / Dual Encoder                   | PyTorch            | 🚧 Direncanakan                          |
+| 06  | Learning-to-Rank                           | PyTorch / LightGBM | 🚧 Direncanakan                          |
 
----
-
-# 🧠 Pendekatan yang Dieksplorasi
-
-Proyek ini dikembangkan secara bertahap. Pendekatan yang telah dan akan dieksplorasi meliputi:
-
-| No. | Pendekatan                                 | Teknologi          | Status         |
-| --- | ------------------------------------------ | ------------------ | -------------- |
-| 01  | Popularity-Based Recommendation            | Pandas             | ✅ Selesai      |
-| 02  | Content-Based — TF-IDF + Cosine Similarity | Scikit-learn       | 🚧 Coming Soon |
-| 03  | Collaborative Filtering                    | TBD                | 🚧 Coming Soon |
-| 04  | Neural Collaborative Filtering             | PyTorch            | 🚧 Coming Soon |
-| 05  | Two-Tower / Dual Encoder                   | PyTorch            | 🚧 Coming Soon |
-| 06  | Learning-to-Rank                           | PyTorch / LightGBM | 🚧 Coming Soon |
-
-> Daftar pendekatan dapat bertambah seiring eksplorasi dan pengembangan proyek.
-
----
+Status akan diperbarui berdasarkan perkembangan implementasi dan eksperimen aktual.
 
 ## 🔎 Perkembangan Pendekatan
 
-Secara umum, proyek berkembang dari pendekatan sederhana menuju sistem yang semakin kompleks:
-
 ```text
-Rule-Based Ranking
-        ↓
+Popularity-Based Recommendation
+              ↓
 Content-Based Recommendation
-        ↓
+              ↓
 Collaborative Filtering
-        ↓
+              ↓
 Neural Recommendation
-        ↓
+              ↓
 Candidate Retrieval
-        ↓
+              ↓
 Learning-to-Rank
-        ↓
-Future Approaches
+              ↓
+Future Improvements
 ```
 
-Urutan tersebut bukan berarti pendekatan yang lebih kompleks selalu lebih baik.
+Urutan ini merupakan jalur eksplorasi pembelajaran, bukan pernyataan bahwa pendekatan yang lebih kompleks selalu lebih baik.
 
-Tujuan utama proyek adalah memahami **trade-off antara kesederhanaan, relevansi, personalisasi, kompleksitas model, dan kebutuhan komputasi**.
+Fokus utama adalah memahami trade-off antara relevansi, personalisasi, kesederhanaan, kompleksitas model, dan kebutuhan komputasi.
 
----
+## 📈 Evaluasi dan Perbandingan
 
-# 📈 Evaluasi dan Perbandingan
+Evaluasi dilakukan sesuai dengan tujuan dan karakteristik setiap pendekatan.
 
-Evaluasi merupakan bagian penting dalam pengembangan sistem rekomendasi.
-
-Metode evaluasi akan disesuaikan dengan jenis data, tujuan rekomendasi, dan karakteristik masing-masing pendekatan.
-
-Beberapa metrik yang dapat digunakan antara lain:
+Metrik yang dapat dipertimbangkan meliputi:
 
 * Precision@K
 * Recall@K
@@ -112,30 +80,25 @@ Beberapa metrik yang dapat digunakan antara lain:
 * Hit Rate@K
 * Mean Reciprocal Rank (MRR)
 * Coverage
-* Retrieval performance
 * Waktu inferensi
 * Penggunaan sumber daya
 
-Tidak semua metrik akan diterapkan pada setiap pendekatan. Pemilihan metrik akan disesuaikan dengan permasalahan dan data yang tersedia.
+Tidak semua metrik dapat diterapkan pada setiap metode. Metrik akan dipilih berdasarkan ketersediaan data relevansi dan tujuan evaluasi.
 
-### 📊 Perbandingan Model
+### Perbandingan Pendekatan
 
-Bagian ini akan diperbarui setelah beberapa pendekatan selesai diimplementasikan.
+| Pendekatan                     | Hasil saat ini                    | Catatan                              |
+| ------------------------------ | --------------------------------- | ------------------------------------ |
+| Popularity-Based               | Implementasi selesai              | Baseline berbasis popularitas        |
+| TF-IDF Content-Based           | Pengujian kualitatif awal selesai | Belum dievaluasi dengan ground truth |
+| Collaborative Filtering        | Belum tersedia                    | Direncanakan                         |
+| Neural Collaborative Filtering | Belum tersedia                    | Direncanakan                         |
+| Two-Tower                      | Belum tersedia                    | Direncanakan                         |
+| Learning-to-Rank               | Belum tersedia                    | Direncanakan                         |
 
-| Pendekatan                     | Metrik Utama | Hasil | Catatan     |
-| ------------------------------ | -----------: | ----: | ----------- |
-| Popularity-Based               |            — |     — | Baseline    |
-| TF-IDF                         |            — |     — | Coming Soon |
-| Collaborative Filtering        |            — |     — | Coming Soon |
-| Neural Collaborative Filtering |            — |     — | Coming Soon |
-| Two-Tower                      |            — |     — | Coming Soon |
-| Learning-to-Rank               |            — |     — | Coming Soon |
+Hasil kuantitatif akan dicantumkan setelah eksperimen dan evaluasi yang sesuai benar-benar dilakukan.
 
-> Tabel evaluasi akan diperbarui berdasarkan hasil eksperimen aktual. Tidak ada hasil yang dicantumkan sebelum model benar-benar diuji.
-
----
-
-# 📁 Struktur Proyek
+## 📁 Struktur Proyek
 
 ```text
 movie-recommendation-system/
@@ -154,6 +117,7 @@ movie-recommendation-system/
 ├── docs/
 │   ├── 01_popularity_based.md
 │   ├── 02_tfidf_content_based.md
+│   ├── 02_content_based_deep_dive.md
 │   ├── 03_collaborative_filtering.md
 │   ├── 04_ncf_pytorch.md
 │   ├── 05_two_tower_pytorch.md
@@ -165,86 +129,67 @@ movie-recommendation-system/
 │   └── evaluation.py
 │
 ├── models/
-│
 ├── .gitignore
 └── README.md
 ```
 
-Struktur dapat berkembang seiring bertambahnya algoritma, eksperimen, dan kebutuhan sistem.
-
----
+Struktur di atas merupakan struktur yang direncanakan. Pastikan nama file dan folder disesuaikan dengan isi repository yang benar-benar sudah dibuat. Folder atau file yang belum ada tidak perlu dibuat hanya demi menyesuaikan diagram ini.
 
 ## 🛠️ Teknologi
 
-Teknologi yang digunakan atau akan dieksplorasi dalam proyek ini meliputi:
+Teknologi yang digunakan atau direncanakan untuk dieksplorasi:
 
-* **Python**
-* **Pandas**
-* **NumPy**
-* **Scikit-learn**
-* **PyTorch**
-* **LightGBM**
-* **Jupyter Notebook**
+* Python
+* Pandas
+* NumPy
+* Scikit-learn
+* SciPy
+* PyTorch
+* LightGBM
+* Jupyter Notebook / Google Colab
 
-Library tambahan dapat digunakan apabila diperlukan oleh pendekatan tertentu.
+Penggunaan library disesuaikan dengan kebutuhan masing-masing pendekatan.
 
----
+## 📚 Dokumentasi Model
 
-# 📚 Dokumentasi Model
-
-Penjelasan teknis setiap pendekatan dipisahkan dari README utama agar dokumentasi proyek tetap ringkas.
-
-Dokumentasi masing-masing model dapat ditemukan di:
+Setiap pendekatan memiliki dokumentasi tersendiri agar penjelasan teknis tidak menumpuk di README utama.
 
 | Pendekatan                     | Dokumentasi                                                                |
 | ------------------------------ | -------------------------------------------------------------------------- |
 | Popularity-Based               | [`docs/01_popularity_based.md`](docs/01_popularity_based.md)               |
 | TF-IDF Content-Based           | [`docs/02_tfidf_content_based.md`](docs/02_tfidf_content_based.md)         |
+| Content-Based Deep Dive        | [`docs/02_content_based_deep_dive.md`](docs/02_content_based_deep_dive.md) |
 | Collaborative Filtering        | [`docs/03_collaborative_filtering.md`](docs/03_collaborative_filtering.md) |
 | Neural Collaborative Filtering | [`docs/04_ncf_pytorch.md`](docs/04_ncf_pytorch.md)                         |
-| Two-Tower                      | [`docs/05_two_tower_pytorch.md`](docs/05_two_tower_pytorch.md)             |
+| Two-Tower / Dual Encoder       | [`docs/05_two_tower_pytorch.md`](docs/05_two_tower_pytorch.md)             |
 | Learning-to-Rank               | [`docs/06_learning_to_rank.md`](docs/06_learning_to_rank.md)               |
 
-Dokumentasi akan tersedia seiring pendekatan tersebut selesai diimplementasikan.
+Dokumentasi pendekatan berikutnya akan dilengkapi seiring selesainya implementasi.
 
----
+## 🚀 Pengembangan Selanjutnya
 
-# 🚀 Pengembangan Selanjutnya
+Rencana pengembangan meliputi:
 
-Proyek ini dirancang sebagai proyek yang berkembang secara bertahap.
+* Mengimplementasikan Collaborative Filtering.
+* Mengeksplorasi Neural Collaborative Filtering dan Two-Tower Recommendation.
+* Mengembangkan pipeline candidate retrieval dan ranking.
+* Mengevaluasi relevansi rekomendasi dengan metode yang sesuai.
+* Membandingkan hasil antarpendekatan.
+* Melakukan refactoring kode notebook menjadi modul yang dapat digunakan kembali.
+* Mengeksplorasi recommendation API dan deployment apabila implementasi inti telah memadai.
 
-Pengembangan selanjutnya dapat mencakup:
+## 📌 Status Proyek
 
-* Implementasi pendekatan rekomendasi tambahan.
-* Eksperimen dengan berbagai representasi user dan item.
-* Eksplorasi metode candidate generation dan retrieval.
-* Pengembangan ranking pipeline.
-* Optimasi performa model.
-* Refactoring notebook menjadi kode yang lebih modular.
-* Penyimpanan dan versioning model.
-* Penyediaan recommendation API.
-* Pengembangan antarmuka pengguna.
-* Eksperimen deployment dan serving.
-* Pengujian pada dataset atau skenario yang berbeda.
+**Status: Aktif dikembangkan.**
 
-Pendekatan baru dapat ditambahkan ke proyek tanpa mengubah struktur utama.
+Popularity-Based Recommendation telah selesai diimplementasikan sebagai baseline. Content-Based Recommendation menggunakan TF-IDF dan cosine similarity juga telah diimplementasikan dan menjalani pengujian kualitatif awal.
 
----
-
-# 📌 Status Proyek
-
-**Status: 🚧 Aktif Dikembangkan**
-
-Saat ini pendekatan pertama, **Popularity-Based Recommendation**, telah selesai sebagai baseline.
-
-Pendekatan berikutnya akan dikembangkan secara bertahap dan setiap implementasi akan didokumentasikan serta dievaluasi berdasarkan karakteristiknya masing-masing.
-
----
+Tahap berikutnya adalah memperkuat pemahaman dan dokumentasi hasil eksperimen, kemudian melanjutkan pengembangan Collaborative Filtering.
 
 ## 💡 Catatan
 
-Proyek ini dikembangkan sebagai sarana pembelajaran dan eksplorasi sistem rekomendasi dengan pendekatan yang semakin kompleks.
+Proyek ini dikembangkan sebagai sarana pembelajaran dan eksplorasi recommendation system.
 
-Fokus utama proyek bukan hanya mendapatkan hasil rekomendasi, tetapi memahami **proses, asumsi, trade-off, dan alasan pemilihan setiap pendekatan**.
+Fokusnya bukan hanya menghasilkan rekomendasi, tetapi juga memahami asumsi, proses, trade-off, keterbatasan, serta alasan pemilihan setiap pendekatan.
 
-Dengan demikian, proyek ini diharapkan dapat menjadi perjalanan dari **baseline sederhana menuju pemahaman yang lebih menyeluruh mengenai machine learning recommendation system, retrieval, dan ranking**.
+Tujuan akhirnya adalah membangun pemahaman bertahap mengenai sistem rekomendasi, machine learning, retrieval, dan ranking.
